@@ -18,6 +18,29 @@
       - helloworld
 - `npm run start:dev`
   - http://localhost:3000/
+  - http://localhost:3000/api
 
 ## Hello
 
+- Organización
+  - AppModule
+    - AppController
+      - helloworld -> AppService.helloworld
+      - helloQuery -> AppService.hello
+      - helloParam -> AppService.hello
+      - helloBody -> AppService.hello
+    - AppService
+      - helloworld -> HelloEntity.helloworld
+      - hello -> HelloEntity.hello
+    - HelloDto
+  - domain
+    - HelloEntity
+      - helloworld
+- `npm run start:dev`
+  - http://localhost:3000/
+  - http://localhost:3000/api
+  - http://localhost:3000/hello
+  - http://localhost:3000/hello/Antonio
+  - http://localhost:3000/hello?name=Antonio
+  - POST http://localhost:3000/hello
+    - body: { "name": "Antonio" }

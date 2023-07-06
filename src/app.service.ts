@@ -3,8 +3,13 @@ import { HelloEntity } from './domain/hello.entity';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
+  helloworld(): string {
     const hello = new HelloEntity();
     return hello.helloworld();
+  }
+
+  hello(name): string {
+    const hello = new HelloEntity();
+    return hello.hello(name);
   }
 }
