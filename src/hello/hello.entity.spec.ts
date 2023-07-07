@@ -1,7 +1,7 @@
-import { HelloEntity } from './hello.entity';
+import { Hello } from './hello.entity';
 
-describe('HelloEntity', () => {
-  const hello: HelloEntity = new HelloEntity();
+describe('Hello', () => {
+  const hello: Hello = new Hello();
 
   describe('helloworld', () => {
     it('should return "Hello World!"', () => {

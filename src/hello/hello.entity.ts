@@ -1,4 +1,4 @@
-export class HelloEntity {
+export class Hello {
   helloworld() {
     return 'Hello World!';
   }

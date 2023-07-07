@@ -1,13 +1,13 @@
 import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 import { ApiQuery, ApiParam, ApiBody } from '@nestjs/swagger';
-import { HelloDto } from './hello.dto';
+import { HelloDto } from './hello/hello.dto';
 
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get()
+  @Get('/helloworld')
   helloworld(): string {
     return this.appService.helloworld();
   }
