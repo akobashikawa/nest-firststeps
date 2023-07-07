@@ -4,6 +4,7 @@
 
 ## Hello World
 
+- Saludar con Hello "World"
 - `npm test`
   - Ejecuta los tests
   - `src\app.controller.spec.ts`
@@ -22,6 +23,7 @@
 
 ## Hello
 
+- Saludar con "Hello {name}!"
 - Organización
   - AppModule
     - AppController
@@ -44,3 +46,15 @@
   - http://localhost:3000/hello?name=Antonio
   - POST http://localhost:3000/hello
     - body: { "name": "Antonio" }
+
+## People
+
+- Guardar nombres de personas
+- `nest g resource`
+- Organización
+  - AppModule
+    - PeopleModule
+      - PeopleController
+      - PeopleService
+    - AppController
+    - AppService
