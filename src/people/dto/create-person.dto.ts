@@ -1,1 +1,3 @@
-export class CreatePersonDto {}
+export class CreatePersonDto {
+  name: string;
+}
