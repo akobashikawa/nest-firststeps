@@ -1,0 +1,4 @@
+**/*.js
+client
+dist
+node_modules
