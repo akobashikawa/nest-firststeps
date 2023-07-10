@@ -2,12 +2,14 @@
 import { ref } from 'vue';
 import axios from 'axios';
 
+const base_url = 'http://localhost:3000';
+
 const message = ref('');
 const error = ref('');
 
 const helloworld = async () => {
   try {
-    const { data } = await axios(`http://localhost:3000/api/helloworld`);
+    const { data } = await axios.get(`${base_url}/api/helloworld`);
     message.value = data;
     error.value = '';
   } catch (err: any) {

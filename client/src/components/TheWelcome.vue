@@ -23,7 +23,9 @@ import SupportIcon from './icons/IconSupport.vue'
     <template #icon>
       <CommunityIcon />
     </template>
-    <template #heading>Hello</template>
+    <template #heading>
+      <router-link to="/hello">Hello</router-link>
+    </template>
 
     Saludar a alguien
   </WelcomeItem>

@@ -22,7 +22,12 @@ const router = createRouter({
       path: '/helloworld',
       name: 'helloworld',
       component: () => import('../views/HelloWorld.vue'),
-    }
+    },
+    {
+      path: '/hello',
+      name: 'hello',
+      component: () => import('../views/Hello.vue'),
+    },
   ]
 })
 

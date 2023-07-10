@@ -14,16 +14,9 @@ export default {
         },
         {
           title: 'Hello',
-          route: 'hello',
+          route: '/hello',
         },
-        {
-          title: 'Fizz',
-          route: 'fizz',
-        },
-        {
-          title: 'Buzz',
-          route: 'buzz',
-        },
+        
       ],
     }),
 
