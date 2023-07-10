@@ -19,8 +19,8 @@
     "noFallthroughCasesInSwitch": false
   },
   "exclude": [
-    "node_modules",
-    "dist",
-    "client"
+    "client/**/*",
+    "dist/**/*",
+    "node_modules/**/*"
   ]
 }

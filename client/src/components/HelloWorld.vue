@@ -1,13 +1,28 @@
 <script setup lang="ts">
-defineProps<{
-  msg: string
-}>()
+import { ref } from 'vue';
+import axios from 'axios';
+
+const message = ref('');
+const error = ref('');
+
+const helloworld = async () => {
+  try {
+    const { data } = await axios(`http://localhost:3000/api/helloworld`);
+    message.value = data;
+    error.value = '';
+  } catch (err: any) {
+    message.value = '';
+    error.value = err;
+  }
+}
+
 </script>
 
 <template>
-  <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
-  </div>
+  <v-btn color="primary" @click="helloworld"> Hello </v-btn>
+  <h2>{{ message }}</h2>
+
+  <div id="error" v-if="error" class="mt-5">{{ error }}</div>
 </template>
 
 <style scoped></style>
