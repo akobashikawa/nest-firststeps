@@ -41,7 +41,7 @@ export default {
 <template>
   <v-form ref="form" validate-on="lazy">
     <v-text-field v-model="name" :rules="nameRules" :counter="40" label="Nombre" required></v-text-field>
-    <v-btn :loading="loading" type="button" class="my-2" text="Hello" @click="submit"></v-btn>
+    <v-btn :loading="loading" type="button" class="my-2" color="primary" text="Hello" @click="submit"></v-btn>
   </v-form>
   <h2>{{ message }}</h2>
 
