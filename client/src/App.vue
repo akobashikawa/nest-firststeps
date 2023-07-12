@@ -16,6 +16,10 @@ export default {
           title: 'Hello',
           route: '/hello',
         },
+        {
+          title: 'People',
+          route: '/people',
+        },
         
       ],
     }),
@@ -30,7 +34,7 @@ export default {
 
 <template>
   <v-layout>
-    <v-app-bar app
+    <v-app-bar
     color="primary"
     >
       <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>

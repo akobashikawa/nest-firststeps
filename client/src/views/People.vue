@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import Hello from '../components/Hello.vue'
+import People from '../components/People.vue'
 </script>
 
 <template>
   <main>
-    <h1>Hello</h1>
+    <h1>People</h1>
     
-    <Hello />
+    <People />
   </main>
 </template>
