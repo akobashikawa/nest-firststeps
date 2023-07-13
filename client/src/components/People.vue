@@ -15,15 +15,17 @@ export default {
   },
 
   methods: {
-    
+    itemAddedHandler(data: any) {
+      (this.$refs.list as any).getItems();
+    }
   }
 };
 
 </script>
 
 <template>
-  <PeopleAdd />
-  <PeopleList />
+  <PeopleAdd @done="itemAddedHandler"/>
+  <PeopleList ref="list" />
 
   <div id="error" v-if="error" class="mt-5">{{ error }}</div>
 </template>

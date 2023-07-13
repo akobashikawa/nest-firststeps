@@ -4,6 +4,8 @@ import axios from 'axios';
 const base_url = 'http://localhost:3000';
 
 export default {
+  emits: ['done'],
+  
   data() {
     return {
       message: '',
@@ -31,6 +33,7 @@ export default {
         this.loading = false;
         this.message = `Hola ${data.name}!`;
         (this.$refs.name as any).select();
+        this.$emit('done', data);
         this.error = '';
       } catch (err: any) {
         this.message = '';
