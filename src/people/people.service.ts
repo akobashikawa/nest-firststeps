@@ -13,7 +13,6 @@ export class PeopleService {
   ) {}
 
   create(createPersonDto: CreatePersonDto) {
-    console.log(createPersonDto);
     const person = this.PeopleRepository.create(createPersonDto);
     return this.PeopleRepository.save(person);
   }
