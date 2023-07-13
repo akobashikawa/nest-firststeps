@@ -1,11 +1,12 @@
 <script lang="ts">
 import axios from 'axios';
 import PeopleAdd from './PeopleAdd.vue';
+import PeopleList from './PeopleList.vue';
 
 const base_url = 'http://localhost:3000';
 
 export default {
-  components: { PeopleAdd },
+  components: { PeopleAdd, PeopleList },
   data() {
     return {
       
@@ -22,6 +23,7 @@ export default {
 
 <template>
   <PeopleAdd />
+  <PeopleList />
 
   <div id="error" v-if="error" class="mt-5">{{ error }}</div>
 </template>

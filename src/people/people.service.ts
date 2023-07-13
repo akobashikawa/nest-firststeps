@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { CreatePersonDto } from './dto/create-person.dto';
 import { UpdatePersonDto } from './dto/update-person.dto';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -29,7 +29,11 @@ export class PeopleService {
     return `This action updates a #${id} person`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} person`;
+  async remove(id: number): Promise<void> {
+    const person = await this.PeopleRepository.findOneBy({ id });
+    if (!person) {
+      throw new NotFoundException(`Registro no encontrado: ${id}`);
+    }
+    await this.PeopleRepository.remove(person);
   }
 }

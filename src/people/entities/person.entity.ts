@@ -12,6 +12,10 @@ export class Person {
     this.name = name;
   }
 
+  getId(): number {
+    return this.id;
+  }
+
   getName(): string {
     return this.name;
   }
