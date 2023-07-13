@@ -42,7 +42,7 @@ export default {
 </script>
 
 <template>
-  <v-btn :loading="loading" type="button" class="my-2" color="primary" text="Listar" @click="getItems"></v-btn>
+  <v-btn :loading="loading" type="button" class="my-2" color="primary" text="Listar" @click="getItems" variant="outlined"></v-btn>
 
   <v-table density="compact" v-if="items.length > 0">
     <thead>

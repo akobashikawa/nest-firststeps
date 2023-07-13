@@ -46,13 +46,21 @@ export default {
 </script>
 
 <template>
-  <v-form ref="form" validate-on="lazy">
-    <v-text-field ref="name" v-model="name" :rules="nameRules" :counter="40" label="Nombre" required></v-text-field>
-    <v-btn :loading="loading" type="button" class="my-2" color="primary" text="Agregar" @click="add"></v-btn>
-  </v-form>
-  <h2>{{ message }}</h2>
+  <v-card title="Agregar">
+    <v-card-item>
+      <v-form ref="form" validate-on="lazy">
+        <v-text-field ref="name" v-model="name" :rules="nameRules" :counter="40" label="Nombre" required></v-text-field>
+      </v-form>
+      
+      <h4>{{ message }}</h4>
 
-  <div id="error" v-if="error" class="mt-5">{{ error }}</div>
+      <v-btn :loading="loading" type="button" class="my-2" color="primary" text="Agregar" @click="add" variant="outlined"></v-btn>
+    </v-card-item>
+
+
+  
+    <div id="error" v-if="error" class="mt-5">{{ error }}</div>
+  </v-card>
 </template>
 
 <style scoped></style>
