@@ -5,38 +5,19 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+import menuItems from '../menuItems'
 </script>
 
 <template>
-  <WelcomeItem>
+  <WelcomeItem v-for="item of menuItems">
     <template #icon>
       <CommunityIcon />
     </template>
     <template #heading>
-      <router-link to="/helloworld">Hello World</router-link>
+      <router-link :to="item.route">{{ item.title }}</router-link>
     </template>
 
-    Saludar a todos
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <CommunityIcon />
-    </template>
-    <template #heading>
-      <router-link to="/hello">Hello</router-link>
-    </template>
-
-    Saludar a alguien
-  </WelcomeItem>
-
-  <WelcomeItem>
-    <template #icon>
-      <DocumentationIcon />
-    </template>
-    <template #heading>People</template>
-
-    Guardar nombres
+    {{ item.description }}
   </WelcomeItem>
 
 </template>

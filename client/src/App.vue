@@ -1,27 +1,12 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <script lang="ts">
+import { RouterLink, RouterView } from 'vue-router';
+import menuItems from './menuItems';
+
 export default {
   data: () => ({
       drawer: false,
       group: null,
-      items: [
-        {
-          title: 'Hello World',
-          route: '/helloworld',
-        },
-        {
-          title: 'Hello',
-          route: '/hello',
-        },
-        {
-          title: 'People',
-          route: '/people',
-        },
-        
-      ],
+      items: menuItems,
     }),
 
     watch: {
